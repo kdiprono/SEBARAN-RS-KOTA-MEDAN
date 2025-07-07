@@ -46,7 +46,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[3.5680600125413564,98.50847592032073],[3.795684673504501,98.92836125460133]]);
+        }).fitBounds([[3.513945589831189,98.5270832790625],[3.711038463228867,98.89062036501973]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -156,8 +156,10 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_ADMINISTRASIKECAMATANKOTAMEDANNEW_1_0() {
-            return {
+        function style_ADMINISTRASIKECAMATANKOTAMEDANNEW_1_0(feature) {
+            switch(String(feature.properties['WADMKC'])) {
+                case 'Medan Amplas':
+                    return {
                 pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -167,8 +169,190 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(164,113,88,1.0)',
+                fillColor: 'rgba(48,18,59,1.0)',
                 interactive: true,
+            }
+                    break;
+                case 'Medan Barat':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(67,79,188,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Medan Baru':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(70,134,251,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Medan Deli':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(40,188,235,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Medan Helvetia':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(27,229,181,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Medan Marelan':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(88,251,116,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Medan Petisah':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(164,252,60,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Medan Polonia':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(218,227,54,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Medan Selayang':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(251,185,56,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Medan Sunggal':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(251,126,33,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Medan Tembung':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(227,68,10,1.0)',
+                interactive: true,
+            }
+                    break;
+                case 'Medan Tuntungan':
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(184,29,2,1.0)',
+                interactive: true,
+            }
+                    break;
+                default:
+                    return {
+                pane: 'pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(122,4,3,1.0)',
+                interactive: true,
+            }
+                    break;
             }
         }
         map.createPane('pane_ADMINISTRASIKECAMATANKOTAMEDANNEW_1');
@@ -267,7 +451,7 @@
         map.addLayer(layer_SEBARANRUMAHSAKITKOTAMEDAN_2);
         var overlaysTree = [
             {label: '<img src="legend/SEBARANRUMAHSAKITKOTAMEDAN_2.png" /> SEBARAN RUMAH SAKIT KOTA MEDAN', layer: layer_SEBARANRUMAHSAKITKOTAMEDAN_2},
-            {label: '<img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1.png" /> ADMINISTRASI KECAMATAN KOTA MEDAN NEW', layer: layer_ADMINISTRASIKECAMATANKOTAMEDANNEW_1},
+            {label: 'ADMINISTRASI KECAMATAN KOTA MEDAN NEW<br /><table><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanAmplas0.png" /></td><td>Medan Amplas</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanBarat1.png" /></td><td>Medan Barat</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanBaru2.png" /></td><td>Medan Baru</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanDeli3.png" /></td><td>Medan Deli</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanHelvetia4.png" /></td><td>Medan Helvetia</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanMarelan5.png" /></td><td>Medan Marelan</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanPetisah6.png" /></td><td>Medan Petisah</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanPolonia7.png" /></td><td>Medan Polonia</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanSelayang8.png" /></td><td>Medan Selayang</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanSunggal9.png" /></td><td>Medan Sunggal</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanTembung10.png" /></td><td>Medan Tembung</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_MedanTuntungan11.png" /></td><td>Medan Tuntungan</td></tr><tr><td style="text-align: center;"><img src="legend/ADMINISTRASIKECAMATANKOTAMEDANNEW_1_12.png" /></td><td></td></tr></table>', layer: layer_ADMINISTRASIKECAMATANKOTAMEDANNEW_1},
             {label: "Esri Dark Gray", layer: layer_EsriDarkGray_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
